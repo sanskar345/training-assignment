@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-2.1.xsd">
+
+    <!--    Find all Person records for all females.-->
+
+    <service verb="get" noun="FemalePersons">
+        <description>
+            Service to get all Person records for all females.
+        </description>
+        <out-parameters>
+            <parameter name="personsList"/>
+        </out-parameters>
+        <actions>
+            <set field="gender" value="F"></set>
+            <!-- Find person records -->
+            <entity-find entity-name="mantle.party.Person" list="personsList">
+                <econdition field-name="gender"/>
+            </entity-find>
+            <!-- The personsList will be returned as the output. -->
+        </actions>
+    </service>
+
+    <!--    List the Person details with MarsMarried marital status.-->
+    <service verb="get" noun="Persons">
+        <description>
+            Service to get Person details with MarsMarried marital status.
+        </description>
+        <out-parameters>
+            <parameter name="personsList"/>
+        </out-parameters>
+        <actions>
+            <set field="maritalStatusEnumId" value="MarsMarried"></set>
+            <!-- Find person records -->
+            <entity-find entity-name="mantle.party.Person" list="personsList">
+                <econdition field-name="maritalStatusEnumId"/>
+            </entity-find>
+            <!-- The personsList will be returned as the output. -->
+        </actions>
+    </service>
+</services>
