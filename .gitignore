@@ -1,0 +1,56 @@
+# gradle/build files
+build
+.gradle
+/framework/dependencies
+
+# build generated files
+/moqui*.war
+/Save*.zip
+
+# runtime directory (separate repository so ignore directory entirely)
+/execwartmp
+/docker/runtime
+/docker/db
+/docker/elasticsearch/data/nodes
+/docker/opensearch/data/nodes
+
+# IntelliJ IDEA files
+.idea
+out
+*.ipr
+*.iws
+*.iml
+
+# Eclipse files (and some general ones also used by Eclipse)
+.metadata
+bin
+tmp
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings
+.loadpath
+
+# NetBeans files
+nbproject/private
+nbbuild
+.nb-gradle
+nbdist
+nbactions.xml
+nb-configuration.xml
+
+# OSX auto files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+
+# Windows auto files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux auto files
+*~
